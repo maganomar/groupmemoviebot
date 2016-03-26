@@ -22,7 +22,7 @@ function postMessage() {
   var botResponse, options, body, botReq;
 
   //botResponse = cool();
-  botResponse = "1.Warriros" + "2.Spurs";
+  botResponse = "1.Warriros " + "2.Spurs" + "3. Thunder ";
 
   options = {
     hostname: 'api.groupme.com',
