@@ -28,8 +28,8 @@ callback = function(response) {
     test = str;
   });
 }
-
 http.request(options, callback).end();
+
 
 
 //-----------
@@ -41,6 +41,7 @@ function respond() {
 
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
+    http.request(options, callback).end();
     postMessage();
     this.res.end();
   } else {
@@ -57,7 +58,7 @@ function postMessage() {
   var botResponse, options, body, botReq;
 
   // test
-  botResponse = test + "Hi world";
+  botResponse = test;
   console.log("Test message");
   console.log(test);
 
