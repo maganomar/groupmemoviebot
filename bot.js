@@ -3,7 +3,7 @@ var cool = require('cool-ascii-faces');
 var http        = require('http');
 var botID = process.env.BOT_ID;
 
-
+var testconsole = "";
 var test = "";
 //------------------
 
@@ -31,11 +31,14 @@ callback = function(response) {
     var imdbRating = obj.imdbRating;
     var movieTitle = obj.Title
     var metacriticRating = obj.Metascore;
-    test = movieTitle + "'s rating on Rotten Tomatoes is " + tomatoRating;
+    var finalresponse = movieTitle + "'s rating on Rotten Tomatoes is - test for callback - " + tomatoRating;
     console.log(test);
+    console.log(testconsole);
+    return finalresponse;
 
   });
 }
+
 http.request(options, callback).end();
 
 
@@ -50,7 +53,7 @@ function respond() {
       //botRegex = thedarkknight;
 
       var beginput = request.text.slice(0,9);
-
+      testconsole = beginput;
 
 //botRegex.test(request.text)) {
   //if (request.text && request.text == "Movie Bot"){
@@ -74,7 +77,7 @@ function postMessage() {
   var botResponse, options, body, botReq;
 
   // test
-  botResponse = test;
+  botResponse = http.request(options, callback).end();
   console.log("Test message");
   console.log(test);
 
