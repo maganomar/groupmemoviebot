@@ -51,7 +51,7 @@ function respond() {
 
       var input = JSON.stringify(request.text);
 
-  if(request.text == "Movie Bot"){ //botRegex.test(request.text)) {
+  if(request.text.startsWith("Movie Bot")){ //botRegex.test(request.text)) {
     this.res.writeHead(200);
     postMessage();
     this.res.end();
