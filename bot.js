@@ -1,7 +1,37 @@
 var HTTPS = require('https');
 var cool = require('cool-ascii-faces');
-
+var http        = require('http');
 var botID = process.env.BOT_ID;
+
+
+var test = "";
+//------------------
+
+var options = {
+  host: 'www.random.org',
+  path: '/integers/?num=1&min=1&max=10&col=1&base=10&format=plain&rnd=new'
+};
+
+callback = function(response) {
+  var str = '';
+
+  //another chunk of data has been recieved, so append it to `str`
+  response.on('data', function (chunk) {
+    str += chunk;
+  });
+
+  //the whole response has been recieved, so we just print it out here
+  response.on('end', function () {
+    console.log(str);
+    test = str;
+  });
+}
+
+http.request(options, callback).end();
+
+
+//-----------
+
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
@@ -18,11 +48,14 @@ function respond() {
   }
 }
 
+
+
+
 function postMessage() {
   var botResponse, options, body, botReq;
 
   // test
-  botResponse = "1. Cavs " + "2. Celtics " + "3. Raptors ";
+  botResponse = test;
 
   options = {
     hostname: 'api.groupme.com',
