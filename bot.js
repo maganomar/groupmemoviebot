@@ -4,31 +4,7 @@ var http        = require('http');
 var botID = process.env.BOT_ID;
 
 
-var test = "";
-//------------------
 
-var options = {
-  host: 'www.omdbapi.com',
-  path: '/?i=tt0468569&plot=full&r=json&tomatoes=true',
-  method: 'GET'
-};
-
-callback = function(response) {
-  var str = '';
-
-  //another chunk of data has been recieved, so append it to `str`
-  response.on('data', function (chunk) {
-    str += chunk;
-  });
-
-  //the whole response has been recieved, so we just print it out here
-  response.on('end', function () {
-    console.log(str);
-
-    test = str;
-  });
-}
-http.request(options, callback).end();
 
 
 
@@ -41,7 +17,6 @@ function respond() {
 
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
-    http.request(options, callback).end();
     postMessage();
     this.res.end();
   } else {
@@ -56,6 +31,36 @@ function respond() {
 
 function postMessage() {
   var botResponse, options, body, botReq;
+
+  var test = "";
+  //------------------
+
+  var options = {
+    host: 'www.omdbapi.com',
+    path: '/?i=tt0468569&plot=full&r=json&tomatoes=true',
+    method: 'GET'
+  };
+
+  callback = function(response) {
+    var str = '';
+
+    //another chunk of data has been recieved, so append it to `str`
+    response.on('data', function (chunk) {
+      str += chunk;
+    });
+
+    //the whole response has been recieved, so we just print it out here
+    response.on('end', function () {
+      console.log(str);
+
+      test = str;
+    });
+  }
+  http.request(options, callback).end();
+
+
+
+  
 
   // test
   botResponse = test;
