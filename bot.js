@@ -59,7 +59,7 @@ function respond() {
 //botRegex.test(request.text)) {
   //if (request.text && request.text == "Movie Bot"){
 
-  if(request.text == "movie"){ 
+  if(request.text == "Movie Bot"){ 
 
     this.res.writeHead(200);
     postMessage();
@@ -91,7 +91,7 @@ function postMessage() {
 
   body = {
     "bot_id" : botID,
-    "text" : botResponse
+    "text" : "Hello World!"//botResponse
   };
 
   console.log('sending ' + botResponse + ' to ' + botID);
