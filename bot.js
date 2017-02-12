@@ -61,7 +61,7 @@ function postMessage() {
   var botResponse, options, body, botReq;
 
   // test
-  botResponse = test;
+  botResponse = obj;
   console.log("Test message");
   console.log(test);
 
