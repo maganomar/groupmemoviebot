@@ -56,6 +56,9 @@ function postMessage() {
 
   // test
   botResponse = test + "Hi world";
+  console.log("Test message");
+  console.log(test);
+  
 
   options = {
     hostname: 'api.groupme.com',
