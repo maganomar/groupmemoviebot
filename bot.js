@@ -45,13 +45,13 @@ http.request(options, callback).end();
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /^ball stat$/;
+      botRegex = /^Movie Bot$/;
       
       //botRegex = thedarkknight;
 
       var input = JSON.stringify(request.text);
 
-  if(request.text &&  input.startsWith("Movie Bot")){ //botRegex.test(request.text)) {
+  if(request.text == "Movie Bot"){ //botRegex.test(request.text)) {
     this.res.writeHead(200);
     postMessage();
     this.res.end();
