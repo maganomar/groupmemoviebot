@@ -5,7 +5,7 @@ var botID = process.env.BOT_ID;
 
 var testconsole = "";
 var test = "";
-var finalresponse = "";
+var finalresponse = "old response";
 //------------------
 
 var options = {
@@ -80,8 +80,7 @@ function postMessage() {
   // test
   http.request(options, callback).end();
   botResponse = finalresponse;
-  console.log("Test message");
-  console.log(test);
+
 
 
   options = {
