@@ -36,6 +36,7 @@ callback = function(response) {
     console.log(test);
     console.log(testconsole);
     //return finalresponse;
+    console.log(finalresponse);
 
   });
 }
@@ -59,7 +60,7 @@ function respond() {
 //botRegex.test(request.text)) {
   //if (request.text && request.text == "Movie Bot"){
 
-  if(request.text == "Movie Bot"){ 
+  if(request.text && botRegex.test(request.text)){ 
 
     this.res.writeHead(200);
     postMessage();
@@ -91,7 +92,7 @@ function postMessage() {
 
   body = {
     "bot_id" : botID,
-    "text" : "Hello World!"//botResponse
+    "text" : "Hello World!" //botResponse
   };
 
   console.log('sending ' + botResponse + ' to ' + botID);
