@@ -35,7 +35,7 @@ callback = function(response) {
     finalresponse = movieTitle + "'s rating on Rotten Tomatoes is - test for callback - " + tomatoRating;
     console.log(test);
     console.log(testconsole);
-    return finalresponse;
+    //return finalresponse;
 
   });
 }
@@ -59,7 +59,7 @@ function respond() {
 //botRegex.test(request.text)) {
   //if (request.text && request.text == "Movie Bot"){
 
-  if(request.text == "Movie Bot"){ 
+  if(request.text == "movie"){ 
 
     this.res.writeHead(200);
     postMessage();
