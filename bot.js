@@ -49,9 +49,11 @@ function respond() {
       
       //botRegex = thedarkknight;
 
-      var input = JSON.stringify(request.text);
+      var beginput = request.text.splice(0,9);
 
-  if(request.text && input.startsWith("Movie Bot")){ //botRegex.test(request.text)) {
+
+  //if(request.text && input.startsWith("Movie Bot")){ //botRegex.test(request.text)) {
+  if (beginput == "Movie Bot"){
     this.res.writeHead(200);
     postMessage();
     this.res.end();
