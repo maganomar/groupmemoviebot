@@ -27,7 +27,7 @@ callback = function(response) {
     test = str;
     var obj = JSON.parse(str);
     //console.log(obj.Title);
-    test = obj.Title;
+    test = obj.tomatoMeter;
     console.log(test);
 
   });
