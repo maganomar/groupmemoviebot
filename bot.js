@@ -40,7 +40,7 @@ callback = function(response) {
   });
 }
 
-//http.request(options, callback).end();
+http.request(options, callback).end();
 
 
 
