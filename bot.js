@@ -13,7 +13,7 @@ var options = {
 };
 
 callback = function(response) {
-  var str = '';
+  var str = '1';
 
   //another chunk of data has been recieved, so append it to `str`
   response.on('data', function (chunk) {
@@ -23,6 +23,8 @@ callback = function(response) {
   //the whole response has been recieved, so we just print it out here
   response.on('end', function () {
     console.log(str);
+    console.log(str);
+
     test = str;
   });
 }
@@ -58,7 +60,7 @@ function postMessage() {
   botResponse = test + "Hi world";
   console.log("Test message");
   console.log(test);
-  
+
 
   options = {
     hostname: 'api.groupme.com',
