@@ -27,7 +27,7 @@ callback = function(response) {
     test = str;
     var obj = JSON.parse(str);
     //console.log(obj.Title);
-    test = JSON.stringify(obj.Title);
+    test = obj.Title;
     console.log(test);
 
   });
@@ -61,7 +61,7 @@ function postMessage() {
   var botResponse, options, body, botReq;
 
   // test
-  botResponse = obj;
+  botResponse = test;
   console.log("Test message");
   console.log(test);
 
