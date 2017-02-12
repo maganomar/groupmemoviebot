@@ -21,8 +21,8 @@ function respond() {
 function postMessage() {
   var botResponse, options, body, botReq;
 
-  //botResponse = cool();
-  botResponse = "1.Warriros " + "2.Spurs" + "3. Thunder ";
+  // test
+  botResponse = "1. Cavs " + "2. Celtics " + "3. Raptors ";
 
   options = {
     hostname: 'api.groupme.com',
