@@ -50,12 +50,9 @@ http.request(options, callback).end();
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /^Movie Bot$/;
+      botRegex = /^\/cool guy$/;
       
       //botRegex = thedarkknight;
-
-      var beginput = request.text.slice(0,9);
-      testconsole = beginput;
 
 //botRegex.test(request.text)) {
   //if (request.text && request.text == "Movie Bot"){
