@@ -44,7 +44,8 @@ http.request(options, callback).end();
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = ^\/The Dark Knight$/;
+      //botRegex = /^\/ball stat$/;
+      botRegex = thedarkknight;
 
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
