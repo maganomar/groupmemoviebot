@@ -25,9 +25,9 @@ callback = function(response) {
   response.on('end', function () {
     
     test = str;
-    console.log(test);
-
-    JSON.stringify(test);
+    var obj = JSON.parse(str);
+    //console.log(obj.Title);
+    test = JSON.stringify(obj.Title);
     console.log(test);
 
   });
