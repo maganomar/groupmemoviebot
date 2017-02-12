@@ -58,7 +58,7 @@ function respond() {
 //botRegex.test(request.text)) {
   //if (request.text && request.text == "Movie Bot"){
 
-  if(request.text == beginput){ 
+  if(request.text == "Movie Bot"){ 
 
     this.res.writeHead(200);
     postMessage();
