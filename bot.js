@@ -5,6 +5,7 @@ var botID = process.env.BOT_ID;
 
 var testconsole = "";
 var test = "";
+var finalresponse = "";
 //------------------
 
 var options = {
@@ -31,7 +32,7 @@ callback = function(response) {
     var imdbRating = obj.imdbRating;
     var movieTitle = obj.Title
     var metacriticRating = obj.Metascore;
-    var finalresponse = movieTitle + "'s rating on Rotten Tomatoes is - test for callback - " + tomatoRating;
+    finalresponse = movieTitle + "'s rating on Rotten Tomatoes is - test for callback - " + tomatoRating;
     console.log(test);
     console.log(testconsole);
     return finalresponse;
@@ -39,7 +40,7 @@ callback = function(response) {
   });
 }
 
-http.request(options, callback).end();
+//http.request(options, callback).end();
 
 
 
@@ -77,7 +78,8 @@ function postMessage() {
   var botResponse, options, body, botReq;
 
   // test
-  botResponse = http.request(options, callback).end();
+  http.request(options, callback).end();
+  botResponse = finalresponse;
   console.log("Test message");
   console.log(test);
 
