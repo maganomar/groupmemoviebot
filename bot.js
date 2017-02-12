@@ -49,7 +49,9 @@ function respond() {
       
       //botRegex = thedarkknight;
 
-  if(request.text &&  request.text.startsWith("Movie Bot")){ //botRegex.test(request.text)) {
+      var input = JSON.stringify(request.text);
+
+  if(request.text &&  input.startsWith("Movie Bot")){ //botRegex.test(request.text)) {
     this.res.writeHead(200);
     postMessage();
     this.res.end();
