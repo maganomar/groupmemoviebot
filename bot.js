@@ -27,10 +27,11 @@ callback = function(response) {
     test = str;
     var obj = JSON.parse(str);
     //console.log(obj.Title);
-    tomatoRating = obj.tomatoMeter;
-    imdbRating = obj.imdbRating;
-    movieTitle = obj.Title
-    metacriticRating = obj.Metascore;
+    var tomatoRating = obj.tomatoMeter;
+    var imdbRating = obj.imdbRating;
+    var movieTitle = obj.Title
+    var metacriticRating = obj.Metascore;
+    test = movieTitle + "'s rating on Rotten Tomatoes is " + tomatoRating;
     console.log(test);
 
   });
@@ -44,7 +45,7 @@ http.request(options, callback).end();
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /^\/ball stat$/;
+      botRegex = /^ball stat$/;
       //botRegex = thedarkknight;
 
   if(request.text && botRegex.test(request.text)) {
