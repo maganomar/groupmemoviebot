@@ -8,12 +8,13 @@ var test = "";
 //------------------
 
 var options = {
-  host: 'www.random.org',
-  path: '/integers/?num=1&min=1&max=10&col=1&base=10&format=plain&rnd=new'
+  host: 'www.omdbapi.com',
+  path: '/?i=tt0468569&plot=full&r=json&tomatoes=true',
+  method: 'GET'
 };
 
 callback = function(response) {
-  var str = '1';
+  var str = '';
 
   //another chunk of data has been recieved, so append it to `str`
   response.on('data', function (chunk) {
@@ -22,7 +23,6 @@ callback = function(response) {
 
   //the whole response has been recieved, so we just print it out here
   response.on('end', function () {
-    console.log(str);
     console.log(str);
 
     test = str;
