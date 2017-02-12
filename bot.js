@@ -27,7 +27,10 @@ callback = function(response) {
     test = str;
     var obj = JSON.parse(str);
     //console.log(obj.Title);
-    test = obj.tomatoMeter;
+    tomatoRating = obj.tomatoMeter;
+    imdbRating = obj.imdbRating;
+    movieTitle = obj.Title
+    metacriticRating = obj.Metascore;
     console.log(test);
 
   });
@@ -41,7 +44,7 @@ http.request(options, callback).end();
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /^\/ball stat$/;
+      botRegex = ^\/The Dark Knight$/;
 
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
