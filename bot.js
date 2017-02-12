@@ -53,7 +53,7 @@ function respond() {
 
 
   //if(request.text && input.startsWith("Movie Bot")){ //botRegex.test(request.text)) {
-  if (request.text == "Movie Bot"){
+  if (request.text && request.text == "Movie Bot"){
     this.res.writeHead(200);
     postMessage();
     this.res.end();
