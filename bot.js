@@ -49,11 +49,14 @@ function respond() {
       
       //botRegex = thedarkknight;
 
-      //var beginput = request.text.splice(0,9);
+      var beginput = request.text.slice(0,9);
 
 
-  if(request.text == "Movie Bot"){ //botRegex.test(request.text)) {
+//botRegex.test(request.text)) {
   //if (request.text && request.text == "Movie Bot"){
+
+  if(request.text == beginput){ 
+
     this.res.writeHead(200);
     postMessage();
     this.res.end();
