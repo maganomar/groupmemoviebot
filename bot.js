@@ -47,7 +47,7 @@ function movieResponse(){
 
 http.request(options, callback).end();
 
-return "#kareemisms: \"" + "\"";
+return movieTitle + "'s rating on Rotten Tomatoes is - test for callback - " + tomatoRating;
 
 
 }
