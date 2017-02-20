@@ -47,7 +47,8 @@ function movieResponse(){
 
 http.request(options, callback).end();
 
-return finalresponse;
+return "#kareemisms: \"" + "\"";
+
 
 }
 
@@ -82,7 +83,7 @@ function postMessage() {
   var botResponse, options, body, botReq;
 
   // test
-  http.request(options, callback).end();
+  //http.request(options, callback).end();
   botResponse = movieResponse();
 
 
