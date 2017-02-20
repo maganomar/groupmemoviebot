@@ -15,7 +15,7 @@ var finalresponse = "old response";
   method: 'GET'
   };
 
-callback = function(response) {
+var callback = function(response) {
   var str = '';
 
   //another chunk of data has been recieved, so append it to `str`
@@ -40,16 +40,14 @@ callback = function(response) {
     console.log(finalresponse);
 
   });
-
-  return "teststring";
 }
 
 function movieResponse(){
 
 
-var test1 = http.request(options, callback).end();
+http.request(options, callback).end();
 
-return test1;
+return finalresponse;
 
 
 }
