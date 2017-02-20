@@ -9,6 +9,9 @@ var finalresponse = "old response";
 //------------------
 
 
+// movie url example:
+// http://www.omdbapi.com/?t=Batman+Begins&y=&plot=short&r=json&tomatoes=true
+
   var options = {
   host: 'www.omdbapi.com',
   path: '/?i=tt0468569&plot=full&r=json&tomatoes=true',
@@ -33,7 +36,7 @@ var callback = function(response) {
     var imdbRating = obj.imdbRating;
     var movieTitle = obj.Title
     var metacriticRating = obj.Metascore;
-    finalresponse = movieTitle + "'s rating on Rotten Tomatoes is - test for callback - " + tomatoRating;
+    finalresponse = movieTitle + "'s rating on Rotten Tomatoes is " + tomatoRating;
     console.log(test);
     console.log(testconsole);
     //return finalresponse;
@@ -124,7 +127,7 @@ exports.respond = respond;
 
 
 
-// ORIGINAL CODE
+// ORIGINAL SAMPLE CODE
 /*
 
 var HTTPS = require('https');
