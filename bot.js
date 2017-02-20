@@ -9,16 +9,13 @@ var finalresponse = "old response";
 //------------------
 
 
-
-function movieResponse(){
-
   var options = {
   host: 'www.omdbapi.com',
   path: '/?i=tt0468569&plot=full&r=json&tomatoes=true',
   method: 'GET'
   };
 
-  callback = function(response) {
+callback = function(response) {
   var str = '';
 
   //another chunk of data has been recieved, so append it to `str`
@@ -45,9 +42,15 @@ function movieResponse(){
   });
 }
 
+function movieResponse(){
+
+
+
+
+
 http.request(options, callback).end();
 
-return movieTitle + "'s rating on Rotten Tomatoes is - test for callback - " + tomatoRating;
+return "'s rating on Rotten Tomatoes is - test for callback - " + tomatoRating;
 
 
 }
