@@ -41,11 +41,11 @@ var callback = function(response) {
 
   });
 }
-
+http.request(options, callback).end();
 function movieResponse(){
 
 
-http.request(options, callback).end();
+
 
 return finalresponse;
 
