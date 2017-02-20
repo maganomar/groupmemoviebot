@@ -14,7 +14,7 @@ var finalresponse = "old response";
 
   var options = {
   host: 'www.omdbapi.com',
-  path: '?t=Batman+Begins&y=&plot=short&r=json&tomatoes=true',
+  path: '/?t=Batman+Begins&y=&plot=short&r=json&tomatoes=true',
   method: 'GET'
   };
 
