@@ -40,17 +40,16 @@ callback = function(response) {
     console.log(finalresponse);
 
   });
+
+  return "teststring";
 }
 
 function movieResponse(){
 
 
+var test1 = http.request(options, callback).end();
 
-
-
-http.request(options, callback).end();
-
-return "'s rating on Rotten Tomatoes is - test for callback - ";
+return test1;
 
 
 }
