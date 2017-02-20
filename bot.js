@@ -50,7 +50,7 @@ function movieResponse(){
 
 http.request(options, callback).end();
 
-return "'s rating on Rotten Tomatoes is - test for callback - " + tomatoRating;
+return "'s rating on Rotten Tomatoes is - test for callback - ";
 
 
 }
