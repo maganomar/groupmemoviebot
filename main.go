@@ -28,13 +28,15 @@ type CallbackStruct struct {
 
 func main(){
 
-	os.Setenv("PORT", "9000")
 	router := mux.NewRouter()
 	router.HandleFunc("/callback", callbackFunc).Methods("POST")
 	router.HandleFunc("/test", testFunc).Methods("POST")
 
-	port := ":9000"
-	fmt.Println("Listening....")
+ 
+	// port := ":9000" // for local testing 
+
+	port := os.Getenv("PORT")
+	fmt.Println("Listening on port " + port + "...")
 	handler := cors.AllowAll().Handler(router)
 	log.Fatal(http.ListenAndServe(port,handler))
 
