@@ -1,0 +1,17 @@
+{
+	"ImportPath": "groupmemoviebot",
+	"GoVersion": "go1.9",
+	"GodepVersion": "v79",
+	"Deps": [
+		{
+			"ImportPath": "github.com/gorilla/mux",
+			"Comment": "v1.6.0-6-g5ab525f",
+			"Rev": "5ab525f4fb1678e197ae59401e9050fa0b6cb5fd"
+		},
+		{
+			"ImportPath": "github.com/rs/cors",
+			"Comment": "v1.2-1-geabcc6a",
+			"Rev": "eabcc6af4bbe5ad3a949d36450326a2b0b9894b8"
+		}
+	]
+}
