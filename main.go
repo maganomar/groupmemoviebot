@@ -3,7 +3,7 @@ package main
 import (
 	"os"
 	"fmt"
-	"log"
+	// "log"
 	"net/http"
 	"strings"
 	"encoding/json"
@@ -35,10 +35,11 @@ func main(){
  
 	// port := ":9000" // for local testing 
 
-	port := os.Getenv("PORT")
+	port := ":" + os.Getenv("PORT")
+	// port := ":" + port
 	fmt.Println("Listening on port " + port + "...")
 	handler := cors.AllowAll().Handler(router)
-	log.Fatal(http.ListenAndServe(port,handler))
+	http.ListenAndServe(port,handler)
 
 }
 
