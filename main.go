@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"strings"
 	"encoding/json"
 	"github.com/rs/cors"
 	"github.com/gorilla/mux"
