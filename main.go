@@ -27,6 +27,7 @@ type CallbackStruct struct {
 
 func main(){
 
+	os.Setenv("PORT", "9000")
 	router := mux.NewRouter()
 	router.HandleFunc("/callback", callbackFunc).Methods("POST")
 	router.HandleFunc("/test", testFunc).Methods("POST")
