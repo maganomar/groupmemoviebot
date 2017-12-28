@@ -30,7 +30,7 @@ func main(){
 
 	router := mux.NewRouter()
 	router.HandleFunc("/callback", callbackFunc).Methods("POST")
-	router.HandleFunc("/test", testFunc).Methods("POST")
+	router.HandleFunc("/test", testFunc).Methods("GET")
 
  
 	// port := ":9000" // for local testing 
@@ -49,7 +49,7 @@ func callbackFunc (w http.ResponseWriter, req *http.Request){
 
 	decoder := json.NewDecoder(req.Body)
 	decoder.Decode(&response)
-	fmt.Println(response)
+	// fmt.Println(response)
 	fmt.Println(response.Text)
 
 	if strings.Contains(response.Text, "MovieBot"){
