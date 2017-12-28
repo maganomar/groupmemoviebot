@@ -28,6 +28,7 @@ func main(){
 
 	router := mux.NewRouter()
 	router.HandleFunc("/callback", callbackFunc).Methods("POST")
+	router.HandleFunc("/test", testFunc).Methods("POST")
 
 	port := ":9000"
 	fmt.Println("Listening....")
@@ -38,12 +39,27 @@ func main(){
 
 func callbackFunc (w http.ResponseWriter, req *http.Request){
 	// fmt.Println(req.Body)
-	var genstruct CallbackStruct
+	var response CallbackStruct
 
 	decoder := json.NewDecoder(req.Body)
-	decoder.Decode(&genstruct)
-	fmt.Println(genstruct)
-	fmt.Println(genstruct.Text)
+	decoder.Decode(&response)
+	fmt.Println(response)
+	fmt.Println(response.Text)
+
+	if strings.Contains(response.Text, "MovieBot"){
+		// Call Movie API here
+	} else {
+		// don't care	
+	}
 	w.WriteHeader(200)
 	w.Write([]byte("hello"))
+
+}
+
+func testFunc (w http.ResponseWriter, req *http.Request){
+
+	fmt.Println("calling test func...")
+	w.WriteHeader(200)
+	w.Write([]byte("hello"))
+
 }
